@@ -144,4 +144,4 @@ No `npx` or Node is required on Cloudflare - `assets/tailwind.css` is already co
 
 ## License
 
-Content and design (c) 2026 100BadIdeas. The App Store badge is Apple's official asset.
+Content and design (c) 2026 100ideas. The App Store badge is Apple's official asset.

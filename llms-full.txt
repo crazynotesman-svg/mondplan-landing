@@ -10,7 +10,7 @@ MondPlan is a privacy-first, one-time purchase biodynamic moon calendar app for 
 - App name: MondPlan - Biodynamic Moon Calendar (月相日历)
 - App Store ID: 6758746304
 - App Store URL: https://apps.apple.com/app/id6758746304
-- Developer: 100BadIdeas (100ideas.net)
+- Developer: 100ideas (100ideas.net)
 - Platform: iPhone, iOS 16.0 or later
 - Category: Lifestyle / Calendar
 - Price: One-time purchase (no subscription, no required in-app purchases)
