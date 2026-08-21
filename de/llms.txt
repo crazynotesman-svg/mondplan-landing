@@ -43,4 +43,9 @@ MondPlan ist ein datenschutzfreundlicher, einmalig käuflicher biodynamischer Mo
 - Support (Deutsch): https://mondplan.100ideas.net/de/support.html
 - Datenschutzerklärung (Deutsch): https://mondplan.100ideas.net/de/privacy.html
 - Mondphasen 2026 (komplettes Jahr, UTC/MEZ, Meeus Kap. 49): https://mondplan.100ideas.net/de/mondphasen-2026.html
+- Vollmond 2026 (13 Daten, Namen, UTC/MEZ): https://mondplan.100ideas.net/de/vollmond-2026.html
+- Neumond 2026 (12 Daten, UTC/MEZ): https://mondplan.100ideas.net/de/neumond-2026.html
+- Mondkalender Garten 2026 (Aussaat/Ernte/Schnitt): https://mondplan.100ideas.net/de/mondkalender-garten-2026.html
+- Haarschnitt nach dem Mond 2026 (Schnitt-/Colorations-Tipps): https://mondplan.100ideas.net/de/haarschnitt-nach-dem-mond-2026.html
 - Startseite (Englisch): https://mondplan.100ideas.net/
+- Moon Phases 2026 (Englisch): https://mondplan.100ideas.net/moon-phases-2026.html
