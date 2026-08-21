@@ -24,6 +24,6 @@
   Content-Type: application/xml; charset=utf-8
   Cache-Control: public, max-age=3600
 
-# Static assets: long cache (files are content-addressed / rarely change)
+# Static assets: medium cache (1h) - logo/og can iterate; visitor sees new brand fast
 /assets/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=3600
