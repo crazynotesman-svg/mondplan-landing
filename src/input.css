@@ -34,12 +34,15 @@ body {
   filter: drop-shadow(0 0 24px rgba(232, 200, 120, 0.35));
 }
 
-/* FAQ accordion - smooth open/close using grid rows */
+/* FAQ accordion - smooth open/close using grid rows.
+   JS toggles the "open" class on the wrapping .faq-item (not the panel),
+   so the expanded rule must be a descendant selector. */
 .faq-panel {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.28s ease;
 }
+.faq-item.open .faq-panel,
 .faq-panel.open {
   grid-template-rows: 1fr;
 }
