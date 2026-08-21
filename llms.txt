@@ -42,3 +42,4 @@ MondPlan is a privacy-first, one-time purchase biodynamic moon calendar app for 
 - Home: https://mondplan.100ideas.net/
 - Support: https://mondplan.100ideas.net/support.html
 - Privacy Policy: https://mondplan.100ideas.net/privacy.html
+- German version: https://mondplan.100ideas.net/de/ (llms.txt: https://mondplan.100ideas.net/de/llms.txt)

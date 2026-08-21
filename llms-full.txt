@@ -100,3 +100,4 @@ MondPlan runs on iPhone with iOS 16.0 or later. For the exact device and version
 - Home: https://mondplan.100ideas.net/
 - Support: https://mondplan.100ideas.net/support.html
 - Privacy Policy: https://mondplan.100ideas.net/privacy.html
+- German version: https://mondplan.100ideas.net/de/ (llms.txt: https://mondplan.100ideas.net/de/llms.txt)

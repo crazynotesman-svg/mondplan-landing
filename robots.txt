@@ -6,6 +6,11 @@
 User-agent: *
 Allow: /
 
+# German subdirectory (/de/) explicitly allowed for all crawlers
+Allow: /de/
+Allow: /de/llms.txt
+Allow: /de/llms-full.txt
+
 # --- Search engines ---
 User-agent: Googlebot
 Allow: /

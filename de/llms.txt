@@ -1,0 +1,45 @@
+# MondPlan
+
+> MondPlan – Biodynamischer Mondkalender & Rhythmus-Tracker (iOS)
+
+MondPlan ist ein datenschutzfreundlicher, einmalig käuflicher biodynamischer Mondkalender für das iPhone. Er richtet den Alltag an den natürlichen Mondrhythmen aus – für Gartenbau, Haarschnitt und Schönheitsplanung, Schlaf und Stimmung. Alle Daten werden lokal auf dem Gerät gespeichert; kein Konto, keine Werbung und kein Tracking.
+
+## Kernfunktionen
+
+- **Biodynamischer Gartenbau-Kalender**: Zunehmender Mond (Neumond bis Vollmond) für Säen, Pflanzen und Umpflanzen; Vollmond für die Ernte; abnehmender Mond für Schnitt, Unkrautentfernung und Bodenarbeit; Neumond für Ruhe und Planung.
+- **Kalender für Haarschnitt & Schönheit**: Traditionelle Mond-Haarpflegefenster – Schnitte beim zunehmenden Mond fördern das Wachstum, Schnitte beim abnehmenden Mond halten die Form länger.
+- **Schlaf- & Stimmungs-Tracking**: Stimmungseinträge mit einem Tipp und Schlafnotizen, verknüpft mit der aktuellen Mondphase – lokal auf dem Gerät ausgewertet.
+- **Home-Screen-Widgets**: Heutige Mondphase, Phasenname, Beleuchtungsgrad in Prozent und Countdown zur nächsten Phase – im Einmalkauf enthalten.
+- **Alle acht Mondphasen**: Neumond, zunehmende Sichel, erstes Viertel, zunehmender Mond, Vollmond, abnehmender Mond, letztes Viertel und abnehmende Sichel.
+- **Vollständig offline**: Keine Internetverbindung und kein Cloud-Konto erforderlich.
+
+## Anwendungsfälle
+
+- Gartenarbeiten wie Säen, Umpflanzen, Ernten und Beschneiden an den Mondphasen ausrichten.
+- Haarschnitte und Schönheitstermine in traditionelle Mondfenster legen.
+- Schlaf und Stimmung über den 29,53 Tage dauernden synodischen Zyklus sanft verfolgen.
+- Die heutige Mondphase mit Home-Screen-Widgets auf einen Blick prüfen.
+
+## Datenschutz
+
+- Es werden keine persönlichen Daten erhoben.
+- Kein Konto, kein Tracking, keine Werbe-SDKs, keine Cloud-Synchronisierung.
+- Alle App-Daten (Stimmungseinträge, Schlafnotizen, Einstellungen) werden lokal auf dem Gerät gespeichert und beim Entfernen der App gelöscht.
+- Datenschutzerklärung: https://mondplan.100ideas.net/de/privacy.html
+
+## Preis
+
+- Einmalkauf. Kein Abonnement, keine wiederkehrenden Gebühren, keine verpflichtenden In-App-Käufe.
+
+## App Store
+
+- App-Name: MondPlan – Biodynamischer Mondkalender (月相日历)
+- App-Store-ID: 6758746304
+- Download: https://apps.apple.com/app/id6758746304
+
+## Weitere Seiten
+
+- Startseite (Deutsch): https://mondplan.100ideas.net/de/
+- Support (Deutsch): https://mondplan.100ideas.net/de/support.html
+- Datenschutzerklärung (Deutsch): https://mondplan.100ideas.net/de/privacy.html
+- Startseite (Englisch): https://mondplan.100ideas.net/

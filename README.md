@@ -11,15 +11,21 @@ plain HTML + Tailwind CSS. Designed for GitHub tracking and Cloudflare Pages dep
 
 ```
 mondplan/
-├── index.html          # Main landing page (hero + interactive moon + features + FAQ)
-├── privacy.html        # App Store compliant privacy policy
-├── support.html        # Support page (required by App Store)
+├── index.html          # Main landing page (EN, default) - hero + interactive moon + features + FAQ
+├── privacy.html        # App Store compliant privacy policy (EN)
+├── support.html        # Support page (EN, required by App Store)
+├── 404.html            # Styled 404 page (noindex) - eliminates soft-404s on Cloudflare Pages
 ├── llms.txt            # Short plain-text summary for AI crawlers (Perplexity, ChatGPT, Claude)
 ├── llms-full.txt       # Full plain-text reference (FAQ + all features) for AI crawlers
 ├── robots.txt          # Allows standard + AI crawlers (GPTBot, PerplexityBot, ClaudeBot...)
-├── sitemap.xml         # XML sitemap (index / privacy / support)
+├── sitemap.xml         # XML sitemap (6 pages: 3 EN + 3 DE) with hreflang alternates
 ├── _headers            # Cloudflare Pages headers (security + charset/cache for crawler files)
 ├── README.md           # This file
+├── de/                 # German localization (DACH market) - subdirectory architecture
+│   ├── index.html      # German landing page (lang="de", German JSON-LD + FAQ)
+│   ├── privacy.html    # German privacy policy (Datenschutzerklärung)
+│   ├── support.html    # German support page
+│   └── llms.txt        # German plain-text summary for AI crawlers
 ├── assets/
 │   ├── tailwind.css    # Compiled, minified Tailwind CSS (committed to the repo)
 │   ├── badge-appstore.svg  # Official Apple "Download on the App Store" badge
@@ -104,6 +110,9 @@ No `npx` or Node is required on Cloudflare - `assets/tailwind.css` is already co
 - [ ] `https://<domain>/sitemap.xml` validates (Google Search Console -> Sitemaps)
 - [ ] `apple-itunes-app` meta tag present in `<head>` (enables the Smart App Banner)
 - [ ] `_headers` is picked up automatically by Cloudflare Pages (no config needed)
+- [ ] `https://<domain>/de/` returns 200 and renders German content (`lang="de"`)
+- [ ] `https://<domain>/de/llms.txt` is served as `text/plain`
+- [ ] All 6 pages expose reciprocal `hreflang` (en / de / x-default) links
 - [ ] Submit the sitemap in Google Search Console and Bing Webmaster Tools
 - [ ] Confirm all `https://apps.apple.com/app/id6758746304` links open the App Store
 
@@ -118,6 +127,12 @@ No `npx` or Node is required on Cloudflare - `assets/tailwind.css` is already co
   both `llms.txt` / `llms-full.txt` at the root for AI search engines. `robots.txt` explicitly
   allows GPTBot, PerplexityBot, ClaudeBot, OAI-SearchBot, Google-Extended, Applebot,
   Amazonbot, cohere-ai, Meta-ExternalAgent, Bytespider, PetalBot and more.
+- **i18n / multi-language**: subdirectory architecture - English at `/` (default) and
+  German (DACH market) at `/de/`. All 6 pages carry reciprocal `hreflang` tags
+  (`en` / `de` / `x-default`); `sitemap.xml` uses `<xhtml:link rel="alternate">` for all
+  language pairs; German pages ship German `MobileApplication` / `WebPage` / `FAQPage`
+  JSON-LD plus a German `/de/llms.txt`. A language switcher (EN | DE) is present in every
+  page header.
 
 ## License
 
