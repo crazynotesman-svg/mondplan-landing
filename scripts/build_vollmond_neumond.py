@@ -404,11 +404,32 @@ def page_html(page_type, lang, cfg, all_events, filtered_events):
     nav_support = "Support" if lang == "de" else "Support"
     nav_phases = "Mondphasen 2026" if lang == "de" else "Moon Phases 2026"
     related_links_title = "Weitere Mondkalender" if lang == "de" else "More Moon Calendars"
-    mondphasen_url = "de/mondphasen-2026.html" if lang == "de" else "moon-phases-2026.html"
-    related_vollmond_url = "de/vollmond-2026.html" if lang == "de" else "en/full-moon-2026.html"
-    related_neumond_url = "de/neumond-2026.html" if lang == "de" else "en/new-moon-2026.html"
-    related_garten_url = "de/mondkalender-garten-2026.html"
-    related_haar_url = "de/haarschnitt-nach-dem-mond-2026.html"
+
+    # ---- Correct relative URLs. Pages live in a subdirectory:
+    #   de/ pages: /de/vollmond-2026.html etc (siblings in /de/)
+    #   en/ pages: /en/full-moon-2026.html etc (siblings in /en/)
+    # Root pages (index, privacy, support, moon-phases) need ../ when
+    # referenced from en/ or de/ subdirectories.
+    home_url = "index.html" if lang == "de" else "../index.html"
+    privacy_url = "privacy.html" if lang == "de" else "../privacy.html"
+    support_url = "support.html" if lang == "de" else "../support.html"
+    phases_url = "mondphasen-2026.html" if lang == "de" else "../moon-phases-2026.html"
+    features_url = "index.html#features" if lang == "de" else "../index.html#features"
+    # cross-language page URL (from de -> en sibling, or en -> de sibling)
+    cross_lang_url = cfg["en_url"] if lang == "de" else cfg["de_url"]
+    # related pages: same-language counterparts
+    if page_type == "vollmond":
+        related_other_url = "neumond-2026.html" if lang == "de" else "new-moon-2026.html"
+        related_other_label = "Neumond 2026" if lang == "de" else "New Moon 2026"
+        related_other_desc = "Alle 12 Neumonde, Daten, Bedeutung." if lang == "de" else "All 12 new moons, dates, meaning."
+    else:
+        related_other_url = "vollmond-2026.html" if lang == "de" else "full-moon-2026.html"
+        related_other_label = "Vollmond 2026" if lang == "de" else "Full Moon 2026"
+        related_other_desc = "Alle 13 Vollmonde, Namen, Daten." if lang == "de" else "All 13 full moons, names, dates."
+    # Garten page is DE-only; link it from both languages via its absolute path
+    garten_url = "../de/mondkalender-garten-2026.html" if lang == "en" else "mondkalender-garten-2026.html"
+    garten_label = "Mondkalender Garten 2026" if lang == "de" else "Moon Gardening 2026"
+    garten_desc = "Aussaat, Ernte, Bodenpflege nach Mond." if lang == "de" else "Sowing, harvest, soil work by moon."
     faq_title = "Haufige Fragen" if lang == "de" else "Frequently Asked Questions"
     effects = {
         "de": {
@@ -471,9 +492,9 @@ def page_html(page_type, lang, cfg, all_events, filtered_events):
   <meta name="twitter:description" content="{cfg['desc']}">
   <meta name="twitter:image" content="https://mondplan.100ideas.net/assets/og-image-de.png">
 
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
-  <link rel="stylesheet" href="assets/tailwind.css?v=2">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=3">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=3">
+  <link rel="stylesheet" href="../assets/tailwind.css?v=3">
 
   <script type="application/ld+json">
   {json.dumps(article_ld, ensure_ascii=False, indent=2)}
@@ -495,17 +516,17 @@ def page_html(page_type, lang, cfg, all_events, filtered_events):
 
   <header class="sticky top-0 z-40 border-b border-white/5 bg-night-950/80 backdrop-blur-md">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Main">
-      <a href="{'de/' if lang == 'de' else ''}index.html" class="flex items-center gap-2 text-base font-semibold text-white">
+      <a href="{home_url}" class="flex items-center gap-2 text-base font-semibold text-white">
         <span aria-hidden="true">&#9790;</span>
         MondPlan
       </a>
       <div class="hidden items-center gap-7 text-sm text-slate-300 md:flex">
-        <a href="{mondphasen_url}" class="transition hover:text-moon-300">{nav_phases}</a>
-        <a href="{'index.html#features' if lang == 'en' else 'de/index.html#features'}" class="transition hover:text-moon-300">{'Features' if lang == 'en' else 'Funktionen'}</a>
+        <a href="{phases_url}" class="transition hover:text-moon-300">{nav_phases}</a>
+        <a href="{features_url}" class="transition hover:text-moon-300">{'Features' if lang == 'en' else 'Funktionen'}</a>
         <a href="#faq" class="transition hover:text-moon-300">FAQ</a>
       </div>
       <div class="flex items-center gap-3">
-        <a href="{nav_url}" class="text-sm text-slate-400 transition hover:text-moon-300" rel="alternate" hreflang="{'en' if lang == 'de' else 'de'}">{nav_label}</a>
+        <a href="{cross_lang_url}" class="text-sm text-slate-400 transition hover:text-moon-300" rel="alternate" hreflang="{'en' if lang == 'de' else 'de'}">{nav_label}</a>
         <a href="{CAMPAIGN_LINK}" class="rounded-full bg-moon-300 px-4 py-2 text-sm font-semibold text-night-950 transition hover:bg-moon-200">{cta_text}</a>
       </div>
     </nav>
@@ -576,21 +597,21 @@ def page_html(page_type, lang, cfg, all_events, filtered_events):
       <div class="mx-auto max-w-6xl px-5 py-14">
         <h2 class="text-2xl font-bold tracking-tight text-white">{related_links_title}</h2>
         <ul class="mt-6 grid gap-4 sm:grid-cols-2">
-          <li><a href="{mondphasen_url}" class="block rounded-2xl border border-white/10 bg-night-950/60 p-5 transition hover:border-moon-400/30">
+          <li><a href="{phases_url}" class="block rounded-2xl border border-white/10 bg-night-950/60 p-5 transition hover:border-moon-400/30">
             <p class="text-sm font-semibold text-white">{nav_phases}</p>
             <p class="mt-1 text-xs text-slate-400">{'Vollstandiger Mondkalender mit allen 4 Phasen pro Monat.' if lang == 'de' else 'Complete lunar calendar with all 4 phases per month.'}</p>
           </a></li>
-          <li><a href="{'en/full-moon-2026.html' if lang == 'en' else 'de/vollmond-2026.html'}" class="block rounded-2xl border border-white/10 bg-night-950/60 p-5 transition hover:border-moon-400/30">
-            <p class="text-sm font-semibold text-white">{'Vollmond 2026' if lang == 'de' else 'Full Moon 2026'}</p>
-            <p class="mt-1 text-xs text-slate-400">{'Alle 13 Vollmonde, Namen, Daten.' if lang == 'de' else 'All 13 full moons, names, dates.'}</p>
+          <li><a href="{related_other_url}" class="block rounded-2xl border border-white/10 bg-night-950/60 p-5 transition hover:border-moon-400/30">
+            <p class="text-sm font-semibold text-white">{related_other_label}</p>
+            <p class="mt-1 text-xs text-slate-400">{related_other_desc}</p>
           </a></li>
-          <li><a href="{'en/new-moon-2026.html' if lang == 'en' else 'de/neumond-2026.html'}" class="block rounded-2xl border border-white/10 bg-night-950/60 p-5 transition hover:border-moon-400/30">
-            <p class="text-sm font-semibold text-white">{'Neumond 2026' if lang == 'de' else 'New Moon 2026'}</p>
-            <p class="mt-1 text-xs text-slate-400">{'Alle 12 Neumonde, Daten, Bedeutung.' if lang == 'de' else 'All 12 new moons, dates, meaning.'}</p>
+          <li><a href="{garten_url}" class="block rounded-2xl border border-white/10 bg-night-950/60 p-5 transition hover:border-moon-400/30">
+            <p class="text-sm font-semibold text-white">{garten_label}</p>
+            <p class="mt-1 text-xs text-slate-400">{garten_desc}</p>
           </a></li>
-          <li><a href="{'de/mondkalender-garten-2026.html' if lang == 'de' else 'de/mondkalender-garten-2026.html'}" class="block rounded-2xl border border-white/10 bg-night-950/60 p-5 transition hover:border-moon-400/30">
-            <p class="text-sm font-semibold text-white">{'Mondkalender Garten 2026' if lang == 'de' else 'Moon Gardening 2026'}</p>
-            <p class="mt-1 text-xs text-slate-400">{'Aussaat, Ernte, Bodenpflege nach Mond.' if lang == 'de' else 'Sowing, harvest, soil work by moon.'}</p>
+          <li><a href="{home_url}" class="block rounded-2xl border border-white/10 bg-night-950/60 p-5 transition hover:border-moon-400/30">
+            <p class="text-sm font-semibold text-white">{'MondPlan Startseite' if lang == 'de' else 'MondPlan home'}</p>
+            <p class="mt-1 text-xs text-slate-400">{'Der biodynamische Mondkalender fur iOS.' if lang == 'de' else 'The biodynamic moon calendar for iOS.'}</p>
           </a></li>
         </ul>
       </div>
@@ -607,10 +628,10 @@ def page_html(page_type, lang, cfg, all_events, filtered_events):
     <div class="mx-auto max-w-6xl px-5 py-10 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
       <p class="text-sm text-slate-500">&copy; 2026 100ideas. Alle Daten nach Jean Meeus &copy; 1998.</p>
       <nav class="flex flex-col gap-3 text-sm text-slate-400 sm:flex-row sm:items-center sm:gap-8" aria-label="Footer navigation">
-        <a href="{'de/' if lang == 'de' else ''}index.html" class="transition hover:text-moon-300">{'Startseite' if lang == 'de' else 'Home'}</a>
-        <a href="{'de/' if lang == 'de' else ''}privacy.html" class="transition hover:text-moon-300">{nav_privacy}</a>
-        <a href="{'de/' if lang == 'de' else ''}support.html" class="transition hover:text-moon-300">{nav_support}</a>
-        <a href="{mondphasen_url}" class="transition hover:text-moon-300">{nav_phases}</a>
+        <a href="{home_url}" class="transition hover:text-moon-300">{'Startseite' if lang == 'de' else 'Home'}</a>
+        <a href="{privacy_url}" class="transition hover:text-moon-300">{nav_privacy}</a>
+        <a href="{support_url}" class="transition hover:text-moon-300">{nav_support}</a>
+        <a href="{phases_url}" class="transition hover:text-moon-300">{nav_phases}</a>
         <a href="{CAMPAIGN_LINK}" class="transition hover:text-moon-300">App Store</a>
       </nav>
     </div>
