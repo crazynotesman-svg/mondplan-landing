@@ -1,0 +1,44 @@
+# MondPlan
+
+> MondPlan - Biodynamic Moon Phase Calendar & Rhythm Tracker (iOS)
+
+MondPlan is a privacy-first, one-time purchase biodynamic moon calendar app for iPhone. It aligns everyday life with natural lunar rhythms, covering gardening, haircut and beauty planning, sleep, and mood tracking. All data is stored locally on the device; no account, no ads, and no tracking.
+
+## Core Features
+
+- **Biodynamic Gardening Calendar**: Waxing moon (New Moon to Full Moon) for sowing, planting, and transplanting; Full Moon for harvesting; Waning moon for pruning, weeding, and soil work; New Moon for rest and planning.
+- **Haircut & Beauty Calendar**: Traditional lunar haircare windows - waxing moon cuts encourage growth, waning moon cuts keep shape longer.
+- **Health & Mood Tracking**: One-tap mood entries and sleep notes tied to the current moon phase, analyzed locally on device.
+- **Home Screen Widgets**: Today's moon phase, phase name, illumination percentage, and countdown to the next phase - included in the one-time purchase.
+- **8-Phase Lunar Tracking**: New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Last Quarter, Waning Crescent.
+- **Works Fully Offline**: No internet connection or cloud account required.
+
+## Use Cases
+
+- Planning garden seeding, transplanting, harvesting, and pruning around moon phases.
+- Scheduling haircuts and beauty appointments on traditional lunar windows.
+- Gently tracking sleep and mood across the 29.53-day synodic cycle.
+- Checking today's moon phase at a glance with home screen widgets.
+
+## Privacy
+
+- No personal data is collected.
+- No account, no tracking, no advertising SDKs, no cloud sync.
+- All app data (mood entries, sleep notes, preferences) is stored locally on the device and is deleted when the app is removed.
+- Privacy policy: https://mondplan.100ideas.net/privacy.html
+
+## Pricing
+
+- One-time purchase. No subscription, no recurring fees, no required in-app purchases.
+
+## App Store
+
+- App name: MondPlan - Biodynamic Moon Calendar (月相日历)
+- App Store ID: 6758746304
+- Download: https://apps.apple.com/app/id6758746304
+
+## Optional
+
+- Home: https://mondplan.100ideas.net/
+- Support: https://mondplan.100ideas.net/support.html
+- Privacy Policy: https://mondplan.100ideas.net/privacy.html

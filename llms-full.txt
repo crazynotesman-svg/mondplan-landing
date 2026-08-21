@@ -1,0 +1,102 @@
+# MondPlan (llms-full.txt)
+
+> Complete reference for AI crawlers. A shorter summary is available at /llms.txt.
+> MondPlan - Biodynamic Moon Phase Calendar & Rhythm Tracker (iOS)
+
+MondPlan is a privacy-first, one-time purchase biodynamic moon calendar app for iPhone. It aligns everyday life with natural lunar rhythms, covering gardening, haircut and beauty planning, sleep, and mood tracking. All data is stored locally on the device; no account, no ads, no tracking, and no cloud sync. The app tracks the moon's synodic cycle (about 29.53 days) across all eight primary lunar phases.
+
+## Key Facts
+
+- App name: MondPlan - Biodynamic Moon Calendar (月相日历)
+- App Store ID: 6758746304
+- App Store URL: https://apps.apple.com/app/id6758746304
+- Developer: 100BadIdeas (100ideas.net)
+- Platform: iPhone, iOS 16.0 or later
+- Category: Lifestyle / Calendar
+- Price: One-time purchase (no subscription, no required in-app purchases)
+- Privacy: No data collection; all data stays on the device
+- Languages: English
+
+## Core Features
+
+### Biodynamic Gardening Calendar
+Traditional lunar gardening guidance mapped to the current phase:
+- Waxing moon (New Moon to Full Moon): sow seeds, plant, and transplant.
+- Full Moon: harvest and gather.
+- Waning moon (Full Moon to New Moon): prune, weed, and work the soil.
+- New Moon: rest and plan the cycle ahead.
+
+### Haircut & Beauty Calendar
+Traditional lunar haircare windows:
+- Waxing moon: cutting to encourage growth and volume.
+- Waning moon: cutting for lasting shape and slower regrowth.
+- Traditional rest days (Lion's day windows) for scalp care.
+- Phase countdowns so you can book at the right moment.
+
+### Health & Mood Tracking
+- One-tap mood entries tied to the current moon phase.
+- Sleep notes across full and new moon windows.
+- Gentle month-in-review of your patterns.
+- Everything analyzed locally - nothing leaves the device.
+
+### Home Screen Widgets
+- Today's phase with an accurate moon illustration.
+- Phase name and illumination percentage.
+- Countdown to the next phase change.
+- Included in the one-time purchase - no extra charge.
+
+### 8-Phase Lunar Tracking
+New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Last Quarter, and Waning Crescent - with illumination percentage and countdown to the next phase.
+
+### Works Fully Offline
+No internet connection or cloud account required. Core features (phase display, lunar calendar, countdowns, widgets) all work offline.
+
+## Use Cases
+
+- Planning garden seeding, transplanting, harvesting, and pruning around moon phases.
+- Scheduling haircuts and beauty appointments on traditional lunar windows.
+- Gently tracking sleep and mood across the 29.53-day synodic cycle.
+- Checking today's moon phase at a glance with home screen widgets.
+
+## FAQ
+
+### What is a biodynamic moon calendar?
+A biodynamic moon calendar connects the lunar cycle - a synodic month of about 29.53 days - with everyday activities such as gardening, haircare, and rest. Traditional biodynamic practice divides the cycle into waxing and waning halves: waxing periods are associated with growth and vitality, while waning periods are associated with settling, pruning, and rest. MondPlan turns this practice into a simple iOS app.
+
+### Is MondPlan free, or does it require a subscription?
+MondPlan is a one-time purchase. There is no subscription, no recurring fee, and no required in-app purchase. Pay once and the full app, including all moon phase features and home screen widgets, is yours.
+
+### Does MondPlan collect or sell my personal data?
+No. MondPlan is privacy-first: it does not collect personal data, does not create an account, does not track you, and does not use advertising SDKs. Your moon phase data, sleep notes, and mood entries are stored locally on your device only.
+
+### Which moon phases does MondPlan track?
+MondPlan tracks all eight primary lunar phases: New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Last Quarter, and Waning Crescent. It also shows the current illumination percentage and the countdown to the next phase.
+
+### How can I use MondPlan for gardening?
+In biodynamic tradition, the waxing moon (from New Moon to Full Moon) is a good time to sow seeds, plant, and transplant, because growth energy is believed to rise. The Full Moon favors harvesting, while the waning moon (from Full Moon to New Moon) is often used for pruning, weeding, and soil work. MondPlan marks these windows on a calendar so you can plan garden tasks around them.
+
+### Does MondPlan work offline?
+Yes. All core features - the moon phase display, the lunar calendar, phase countdowns, and home screen widgets - work fully offline. No internet connection or cloud account is required.
+
+### Are home screen widgets included?
+Yes, home screen widgets are included in the one-time purchase. Widgets show today's moon phase, the phase name, and the countdown to the next phase directly on your Home Screen.
+
+### Which devices and iOS versions does MondPlan support?
+MondPlan runs on iPhone with iOS 16.0 or later. For the exact device and version list, see the App Store listing.
+
+## Privacy
+
+- No personal data is collected.
+- No account, no tracking, no advertising SDKs, no cloud sync.
+- All app data (mood entries, sleep notes, preferences) is stored locally on the device and is deleted when the app is removed.
+- Privacy policy: https://mondplan.100ideas.net/privacy.html
+
+## Pricing
+
+- One-time purchase. No subscription, no recurring fees, no required in-app purchases.
+
+## Pages
+
+- Home: https://mondplan.100ideas.net/
+- Support: https://mondplan.100ideas.net/support.html
+- Privacy Policy: https://mondplan.100ideas.net/privacy.html

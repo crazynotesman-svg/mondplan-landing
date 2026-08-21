@@ -1,0 +1,19 @@
+# Node dev dependencies (Tailwind build only)
+node_modules/
+
+# Build artifacts (assets/tailwind.css is committed, not regenerated locally)
+# Keep the rest of assets/ tracked (badge, favicon, og-image)
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local env
+.env
+.env.local

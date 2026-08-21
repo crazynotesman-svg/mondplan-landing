@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>MondPlan - Biodynamic Moon Phase Calendar &amp; Rhythm Tracker</title>
+  <meta name="description" content="Track moon phases for gardening, haircutting, sleep, and mood. MondPlan aligns your daily life with natural lunar rhythms.">
+  <meta name="apple-itunes-app" content="app-id=6758746304">
+  <link rel="canonical" href="https://mondplan.100ideas.net/">
+  <meta name="theme-color" content="#0a0f24">
+  <meta name="author" content="100BadIdeas">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MondPlan">
+  <meta property="og:title" content="MondPlan - Biodynamic Moon Phase Calendar &amp; Rhythm Tracker">
+  <meta property="og:description" content="Track moon phases for gardening, haircutting, sleep, and mood. MondPlan aligns your daily life with natural lunar rhythms.">
+  <meta property="og:url" content="https://mondplan.100ideas.net/">
+  <meta property="og:image" content="https://mondplan.100ideas.net/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MondPlan - Biodynamic Moon Phase Calendar &amp; Rhythm Tracker">
+  <meta name="twitter:description" content="Track moon phases for gardening, haircutting, sleep, and mood. MondPlan aligns your daily life with natural lunar rhythms.">
+  <meta name="twitter:image" content="https://mondplan.100ideas.net/assets/og-image.png">
+
+  <!-- Assets -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/tailwind.css">
+
+  <!-- Structured Data: MobileApplication (subclass of SoftwareApplication) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "MondPlan - Biodynamic Moon Calendar",
+    "alternateName": "MondPlan 月相日历",
+    "operatingSystem": "iOS 16.0 or later",
+    "applicationCategory": "LifestyleApplication",
+    "applicationSubCategory": "Calendar",
+    "description": "MondPlan is a privacy-first, one-time purchase biodynamic moon calendar for iOS. It tracks moon phases and lunar rhythms for gardening, haircut and beauty planning, sleep, and mood tracking. All data is stored locally on device.",
+    "url": "https://mondplan.100ideas.net/",
+    "sameAs": ["https://apps.apple.com/app/id6758746304"],
+    "featureList": [
+      "Biodynamic gardening calendar based on moon phases",
+      "Haircut and beauty planning by lunar rhythm",
+      "Sleep and mood tracking with local on-device analysis",
+      "Home screen widgets showing today's moon phase",
+      "8-phase lunar cycle tracking (New, Waxing Crescent, First Quarter, Waxing Gibbous, Full, Waning Gibbous, Last Quarter, Waning Crescent)"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD",
+      "description": "One-time purchase. No subscription, no in-app purchases required."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "100BadIdeas",
+      "url": "https://100ideas.net/",
+      "email": "support@100ideas.net"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: WebPage + Organization (entity clarity for AI engines) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["WebPage", "CollectionPage"],
+    "name": "MondPlan - Biodynamic Moon Phase Calendar & Rhythm Tracker",
+    "url": "https://mondplan.100ideas.net/",
+    "description": "Track moon phases for gardening, haircutting, sleep, and mood. MondPlan aligns your daily life with natural lunar rhythms.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "MondPlan",
+      "url": "https://mondplan.100ideas.net/"
+    },
+    "about": {
+      "@type": "Product",
+      "name": "MondPlan - Biodynamic Moon Calendar",
+      "category": "Lifestyle Application",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Gardeners, haircare and beauty planners, and people tracking sleep and mood by lunar rhythms"
+      }
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a biodynamic moon calendar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A biodynamic moon calendar connects the lunar cycle (a synodic month of about 29.53 days) with everyday activities such as gardening, haircare, and rest. Traditional biodynamic practice divides the cycle into waxing and waning halves: waxing periods are associated with growth and vitality, while waning periods are associated with settling, pruning, and rest. MondPlan turns this practice into a simple iOS app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is MondPlan free, or does it require a subscription?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MondPlan is a one-time purchase. There is no subscription, no recurring fee, and no required in-app purchase. Pay once and the full app, including all moon phase features and home screen widgets, is yours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does MondPlan collect or sell my personal data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. MondPlan is privacy-first: it does not collect personal data, does not create an account, does not track you, and does not use advertising SDKs. Your moon phase data, sleep notes, and mood entries are stored locally on your device only."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which moon phases does MondPlan track?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MondPlan tracks all eight primary lunar phases: New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Last Quarter, and Waning Crescent. It also shows the current illumination percentage and the countdown to the next phase."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I use MondPlan for gardening?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In biodynamic tradition, the waxing moon (from New Moon to Full Moon) is a good time to sow seeds, plant, and transplant, because growth energy is believed to rise. The Full Moon favors harvesting, while the waning moon (from Full Moon to New Moon) is often used for pruning, weeding, and soil work. MondPlan marks these windows on a calendar so you can plan garden tasks around them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does MondPlan work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All core features - the moon phase display, the lunar calendar, phase countdowns, and home screen widgets - work fully offline. No internet connection or cloud account is required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are home screen widgets included?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, home screen widgets are included in the one-time purchase. Widgets show today's moon phase, the phase name, and the countdown to the next phase directly on your Home Screen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which devices and iOS versions does MondPlan support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MondPlan runs on iPhone with iOS 16.0 or later. For the exact device and version list, see the App Store listing."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-night-950 text-slate-200 font-sans antialiased">
+
+  <!-- ============ Header ============ -->
+  <header class="sticky top-0 z-50 border-b border-white/5 bg-night-950/80 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="MondPlan home">
+        <svg class="h-8 w-8" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#111a3a"/>
+          <circle cx="42" cy="32" r="19" fill="#f3dfa0"/>
+          <circle cx="50" cy="22" r="5" fill="#111a3a"/>
+          <circle cx="12" cy="12" r="1.4" fill="#ffffff" opacity="0.7"/>
+          <circle cx="56" cy="52" r="1.2" fill="#ffffff" opacity="0.6"/>
+        </svg>
+        <span class="text-lg font-semibold tracking-tight text-white">MondPlan</span>
+      </a>
+      <div class="hidden items-center gap-7 text-sm text-slate-300 md:flex">
+        <a href="#features" class="transition hover:text-moon-300">Features</a>
+        <a href="#moon" class="transition hover:text-moon-300">Moon Phase</a>
+        <a href="#faq" class="transition hover:text-moon-300">FAQ</a>
+        <a href="privacy.html" class="transition hover:text-moon-300">Privacy</a>
+        <a href="support.html" class="transition hover:text-moon-300">Support</a>
+      </div>
+      <a href="https://apps.apple.com/app/id6758746304" class="rounded-full bg-moon-300 px-5 py-2 text-sm font-semibold text-night-950 transition hover:bg-moon-200">
+        Download
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ Hero ============ -->
+    <section class="starfield relative overflow-hidden" aria-labelledby="hero-title">
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-night-900/40 via-transparent to-night-950" aria-hidden="true"></div>
+      <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-2 md:py-28">
+
+        <div>
+          <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-moon-400/30 bg-moon-400/10 px-4 py-1.5 text-xs font-medium tracking-wide text-moon-300">
+            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+            </svg>
+            Biodynamic Moon Calendar for iOS
+          </p>
+          <h1 id="hero-title" class="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Live in rhythm<br>with the moon.
+          </h1>
+          <p class="mt-6 max-w-md text-lg leading-relaxed text-slate-300">
+            MondPlan aligns your daily life with natural lunar rhythms - plan gardening, haircuts and beauty care, and gently track sleep and mood across every moon phase.
+          </p>
+          <div class="mt-9 flex flex-wrap items-center gap-5">
+            <a href="https://apps.apple.com/app/id6758746304" aria-label="Download MondPlan on the App Store">
+              <img src="assets/badge-appstore.svg" alt="Download on the App Store" width="180" height="60" loading="eager">
+            </a>
+          </div>
+          <ul class="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-400" aria-label="Key facts">
+            <li class="flex items-center gap-1.5">
+              <svg class="h-4 w-4 text-moon-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              One-time purchase
+            </li>
+            <li class="flex items-center gap-1.5">
+              <svg class="h-4 w-4 text-moon-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              Privacy-first, data stays on device
+            </li>
+            <li class="flex items-center gap-1.5">
+              <svg class="h-4 w-4 text-moon-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              No account, no ads, no tracking
+            </li>
+          </ul>
+        </div>
+
+        <!-- Interactive moon phase widget -->
+        <div id="moon" class="relative mx-auto w-full max-w-sm" aria-label="Interactive moon phase display">
+          <div class="rounded-3xl border border-white/10 bg-night-900/80 p-8 shadow-2xl shadow-black/50 backdrop-blur">
+            <div class="mb-6 flex items-baseline justify-between">
+              <h2 class="text-sm font-medium tracking-wide text-slate-400">Today's Moon</h2>
+              <button id="btn-today" type="button" class="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300 transition hover:border-moon-400/50 hover:text-moon-300">
+                Today
+              </button>
+            </div>
+
+            <div class="moon-canvas mx-auto w-52" aria-hidden="true">
+              <svg id="moon-svg" viewBox="0 0 100 100" class="h-auto w-full" role="img" aria-label="Moon phase illustration">
+                <title>Current moon phase</title>
+                <desc>An illustration of the moon's current phase, updated by the slider.</desc>
+                <defs>
+                  <clipPath id="clip-left"><rect x="0" y="0" width="50" height="100"/></clipPath>
+                  <clipPath id="clip-right"><rect x="50" y="0" width="50" height="100"/></clipPath>
+                </defs>
+                <!-- illuminated disc -->
+                <circle id="moon-disc" cx="50" cy="50" r="46" fill="#f3dfa0" stroke="rgba(253,248,231,0.2)" stroke-width="1.5"/>
+                <!-- left-half shadow disc (same radius as illuminated disc) -->
+                <g clip-path="url(#clip-left)">
+                  <circle id="dark-left" cx="50" cy="50" r="46" fill="#0a0f24"/>
+                </g>
+                <!-- right-half shadow disc -->
+                <g clip-path="url(#clip-right)">
+                  <circle id="dark-right" cx="50" cy="50" r="46" fill="#0a0f24"/>
+                </g>
+              </svg>
+            </div>
+
+            <p id="phase-name" class="mt-5 text-center text-xl font-semibold text-white">New Moon</p>
+            <p class="mt-1 text-center text-sm text-slate-400">
+              <span id="phase-age">0.0</span> days · <span id="phase-illum">0</span>% illuminated
+            </p>
+
+            <div class="mt-7">
+              <input id="phase-slider" type="range" min="0" max="29.53" step="0.01" value="0" class="w-full accent-moon-300" aria-label="Drag to explore moon phases">
+              <div class="mt-2 flex justify-between text-[11px] text-slate-500">
+                <span>New</span><span>First Qtr</span><span>Full</span><span>Last Qtr</span>
+              </div>
+            </div>
+            <p class="mt-5 text-center text-xs leading-relaxed text-slate-500">
+              Drag the slider to explore all eight phases. Tap "Today" for the real current moon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Quick facts strip (entity density) ============ -->
+    <section class="border-y border-white/5 bg-night-900/60" aria-label="MondPlan at a glance">
+      <dl class="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-5 py-10 text-center md:grid-cols-4">
+        <div>
+          <dt class="text-3xl font-bold text-moon-300">8</dt>
+          <dd class="mt-1 text-sm text-slate-400">Lunar phases tracked</dd>
+        </div>
+        <div>
+          <dt class="text-3xl font-bold text-moon-300">29.53</dt>
+          <dd class="mt-1 text-sm text-slate-400">Days in a synodic cycle</dd>
+        </div>
+        <div>
+          <dt class="text-3xl font-bold text-moon-300">100%</dt>
+          <dd class="mt-1 text-sm text-slate-400">Data stays on your device</dd>
+        </div>
+        <div>
+          <dt class="text-3xl font-bold text-moon-300">$0</dt>
+          <dd class="mt-1 text-sm text-slate-400">Subscriptions. Ever.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ============ Quick facts (structured entity table for AI engines) ============ -->
+    <section aria-label="MondPlan quick facts">
+      <div class="mx-auto max-w-6xl px-5 pb-16 pt-2">
+        <dl class="grid grid-cols-2 gap-x-6 gap-y-5 rounded-2xl border border-white/10 bg-night-900/60 p-7 text-sm md:grid-cols-3">
+          <div class="flex items-center justify-between gap-3">
+            <dt class="text-slate-500">Developer</dt>
+            <dd class="text-right text-slate-200">100BadIdeas</dd>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <dt class="text-slate-500">Price</dt>
+            <dd class="text-right text-slate-200">One-time purchase</dd>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <dt class="text-slate-500">Platform</dt>
+            <dd class="text-right text-slate-200">iOS 16.0 or later</dd>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <dt class="text-slate-500">Category</dt>
+            <dd class="text-right text-slate-200">Lifestyle / Calendar</dd>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <dt class="text-slate-500">App Store ID</dt>
+            <dd class="text-right text-slate-200">6758746304</dd>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <dt class="text-slate-500">Data storage</dt>
+            <dd class="text-right text-slate-200">100% on-device</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ Features ============ -->
+    <section id="features" class="mx-auto max-w-6xl px-5 py-20 md:py-24" aria-labelledby="features-title">
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-widest text-moon-400">Features</p>
+        <h2 id="features-title" class="mt-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
+          Your lunar rhythm, in four practical places
+        </h2>
+        <p class="mt-4 text-lg text-slate-300">
+          MondPlan turns the moon's eight-phase cycle into everyday guidance - no astrology required, just the traditional biodynamic calendar.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2">
+        <!-- Feature 1: Gardening -->
+        <article class="rounded-2xl border border-white/10 bg-night-900/70 p-7 transition hover:border-moon-400/30">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-moon-400/15 text-moon-300">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 18C6 9.5 12 4.5 19 5.5c1 7-4 12.5-13 12.5z"/>
+              <path d="M6 18c3-4.5 7-7.5 11-8.5"/>
+            </svg>
+          </div>
+          <h3 class="mt-5 text-lg font-semibold text-white">Biodynamic Gardening</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Follow the traditional lunar gardening calendar, mapped to today's phase:
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Waxing moon - sow seeds, plant, and transplant</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Full moon - harvest and gather</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Waning moon - prune, weed, and work the soil</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>New moon - rest and plan the cycle ahead</li>
+          </ul>
+        </article>
+
+        <!-- Feature 2: Haircut & Beauty -->
+        <article class="rounded-2xl border border-white/10 bg-night-900/70 p-7 transition hover:border-moon-400/30">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-moon-400/15 text-moon-300">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="6" cy="6" r="2.5"/>
+              <circle cx="6" cy="18" r="2.5"/>
+              <path d="M8.5 7.5 20 17"/>
+              <path d="M8.5 16.5 20 7"/>
+            </svg>
+          </div>
+          <h3 class="mt-5 text-lg font-semibold text-white">Haircut &amp; Beauty Calendar</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Traditional lunar beauty practice, ready for your next appointment:
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Waxing moon - cutting to encourage growth and volume</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Waning moon - cutting for lasting shape and slower regrowth</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Lion's day windows - traditional rest days for scalp care</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Phase countdowns so you can book at the right moment</li>
+          </ul>
+        </article>
+
+        <!-- Feature 3: Health & Mood -->
+        <article class="rounded-2xl border border-white/10 bg-night-900/70 p-7 transition hover:border-moon-400/30">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-moon-400/15 text-moon-300">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20s-7-4.5-9.5-9A5.2 5.2 0 0 1 12 6.5 5.2 5.2 0 0 1 21.5 11c-2.5 4.5-9.5 9-9.5 9z"/>
+            </svg>
+          </div>
+          <h3 class="mt-5 text-lg font-semibold text-white">Health &amp; Mood</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Lightweight sleep and mood tracking with a lunar lens - entirely on device:
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+            <li class="flex gap-2"><span class="text-moon-400">•</span>One-tap mood entries tied to the current phase</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Sleep notes across full and new moon windows</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Gentle month-in-review of your patterns</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Everything analyzed locally - nothing leaves the device</li>
+          </ul>
+        </article>
+
+        <!-- Feature 4: Widgets -->
+        <article class="rounded-2xl border border-white/10 bg-night-900/70 p-7 transition hover:border-moon-400/30">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-moon-400/15 text-moon-300">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/>
+              <rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/>
+              <rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/>
+              <rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/>
+            </svg>
+          </div>
+          <h3 class="mt-5 text-lg font-semibold text-white">Home Screen Widgets</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            The moon at a glance, without opening the app:
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Today's phase with an accurate moon illustration</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Phase name and illumination percentage</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Countdown to the next phase change</li>
+            <li class="flex gap-2"><span class="text-moon-400">•</span>Included in the one-time purchase - no extra charge</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ How it works ============ -->
+    <section class="border-y border-white/5 bg-night-900/60" aria-labelledby="how-title">
+      <div class="mx-auto max-w-6xl px-5 py-20 md:py-24">
+        <div class="max-w-2xl">
+          <p class="text-sm font-semibold uppercase tracking-widest text-moon-400">How it works</p>
+          <h2 id="how-title" class="mt-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
+            Three steps to a moon-aligned day
+          </h2>
+        </div>
+        <ol class="mt-12 grid gap-6 md:grid-cols-3">
+          <li class="relative rounded-2xl border border-white/10 bg-night-950/60 p-7">
+            <span class="text-5xl font-bold text-moon-400/25" aria-hidden="true">01</span>
+            <h3 class="mt-4 text-lg font-semibold text-white">See today's phase</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">Open MondPlan and check the phase, illumination, and the countdown to the next change - on the widget or in the app.</p>
+          </li>
+          <li class="relative rounded-2xl border border-white/10 bg-night-950/60 p-7">
+            <span class="text-5xl font-bold text-moon-400/25" aria-hidden="true">02</span>
+            <h3 class="mt-4 text-lg font-semibold text-white">Plan by lunar rhythm</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">Use the biodynamic guidance to schedule sowing, haircuts, and beauty care on favorable waxing or waning windows.</p>
+          </li>
+          <li class="relative rounded-2xl border border-white/10 bg-night-950/60 p-7">
+            <span class="text-5xl font-bold text-moon-400/25" aria-hidden="true">03</span>
+            <h3 class="mt-4 text-lg font-semibold text-white">Track sleep &amp; mood</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">Log quick notes through the cycle and review your patterns - analyzed locally, stored only on your device.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FAQ (GEO) ============ -->
+    <section id="faq" class="mx-auto max-w-3xl px-5 py-20 md:py-24" aria-labelledby="faq-title">
+      <div class="text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-moon-400">FAQ</p>
+        <h2 id="faq-title" class="mt-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
+          Questions, answered
+        </h2>
+      </div>
+
+      <div class="mt-12 space-y-3">
+        <!-- Q1 -->
+        <div class="faq-item overflow-hidden rounded-xl border border-white/10 bg-night-900/70">
+          <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+            <span class="font-medium text-white">What is a biodynamic moon calendar?</span>
+            <svg class="faq-toggle-arrow h-5 w-5 shrink-0 text-moon-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-panel">
+            <div>
+              <p class="px-6 pb-5 text-sm leading-relaxed text-slate-400">
+                A biodynamic moon calendar connects the lunar cycle - a synodic month of about 29.53 days - with everyday activities such as gardening, haircare, and rest. Traditional biodynamic practice divides the cycle into waxing and waning halves: waxing periods are associated with growth and vitality, while waning periods are associated with settling, pruning, and rest. MondPlan turns this practice into a simple iOS app.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item overflow-hidden rounded-xl border border-white/10 bg-night-900/70">
+          <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+            <span class="font-medium text-white">Is MondPlan free, or does it require a subscription?</span>
+            <svg class="faq-toggle-arrow h-5 w-5 shrink-0 text-moon-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-panel">
+            <div>
+              <p class="px-6 pb-5 text-sm leading-relaxed text-slate-400">
+                MondPlan is a one-time purchase. There is no subscription, no recurring fee, and no required in-app purchase. Pay once and the full app, including all moon phase features and home screen widgets, is yours.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item overflow-hidden rounded-xl border border-white/10 bg-night-900/70">
+          <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+            <span class="font-medium text-white">Does MondPlan collect or sell my personal data?</span>
+            <svg class="faq-toggle-arrow h-5 w-5 shrink-0 text-moon-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-panel">
+            <div>
+              <p class="px-6 pb-5 text-sm leading-relaxed text-slate-400">
+                No. MondPlan is privacy-first: it does not collect personal data, does not create an account, does not track you, and does not use advertising SDKs. Your moon phase data, sleep notes, and mood entries are stored locally on your device only.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item overflow-hidden rounded-xl border border-white/10 bg-night-900/70">
+          <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+            <span class="font-medium text-white">Which moon phases does MondPlan track?</span>
+            <svg class="faq-toggle-arrow h-5 w-5 shrink-0 text-moon-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-panel">
+            <div>
+              <p class="px-6 pb-5 text-sm leading-relaxed text-slate-400">
+                MondPlan tracks all eight primary lunar phases: New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Last Quarter, and Waning Crescent. It also shows the current illumination percentage and the countdown to the next phase.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item overflow-hidden rounded-xl border border-white/10 bg-night-900/70">
+          <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+            <span class="font-medium text-white">How can I use MondPlan for gardening?</span>
+            <svg class="faq-toggle-arrow h-5 w-5 shrink-0 text-moon-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-panel">
+            <div>
+              <p class="px-6 pb-5 text-sm leading-relaxed text-slate-400">
+                In biodynamic tradition, the waxing moon (from New Moon to Full Moon) is a good time to sow seeds, plant, and transplant, because growth energy is believed to rise. The Full Moon favors harvesting, while the waning moon (from Full Moon to New Moon) is often used for pruning, weeding, and soil work. MondPlan marks these windows on a calendar so you can plan garden tasks around them.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item overflow-hidden rounded-xl border border-white/10 bg-night-900/70">
+          <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+            <span class="font-medium text-white">Does MondPlan work offline?</span>
+            <svg class="faq-toggle-arrow h-5 w-5 shrink-0 text-moon-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-panel">
+            <div>
+              <p class="px-6 pb-5 text-sm leading-relaxed text-slate-400">
+                Yes. All core features - the moon phase display, the lunar calendar, phase countdowns, and home screen widgets - work fully offline. No internet connection or cloud account is required.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="faq-item overflow-hidden rounded-xl border border-white/10 bg-night-900/70">
+          <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+            <span class="font-medium text-white">Are home screen widgets included?</span>
+            <svg class="faq-toggle-arrow h-5 w-5 shrink-0 text-moon-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-panel">
+            <div>
+              <p class="px-6 pb-5 text-sm leading-relaxed text-slate-400">
+                Yes, home screen widgets are included in the one-time purchase. Widgets show today's moon phase, the phase name, and the countdown to the next phase directly on your Home Screen.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="faq-item overflow-hidden rounded-xl border border-white/10 bg-night-900/70">
+          <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+            <span class="font-medium text-white">Which devices and iOS versions does MondPlan support?</span>
+            <svg class="faq-toggle-arrow h-5 w-5 shrink-0 text-moon-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-panel">
+            <div>
+              <p class="px-6 pb-5 text-sm leading-relaxed text-slate-400">
+                MondPlan runs on iPhone with iOS 16.0 or later. For the exact device and version list, see the App Store listing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Final CTA ============ -->
+    <section class="starfield relative overflow-hidden border-t border-white/5" aria-labelledby="cta-title">
+      <div class="mx-auto max-w-3xl px-5 py-20 text-center md:py-24">
+        <h2 id="cta-title" class="text-3xl font-bold tracking-tight text-white md:text-4xl">
+          One purchase. A lifetime of rhythm.
+        </h2>
+        <p class="mx-auto mt-4 max-w-xl text-lg text-slate-300">
+          No subscriptions. No accounts. No data leaving your device - just you and the moon, day by day.
+        </p>
+        <div class="mt-9 flex justify-center">
+          <a href="https://apps.apple.com/app/id6758746304" aria-label="Download MondPlan on the App Store">
+            <img src="assets/badge-appstore.svg" alt="Download on the App Store" width="180" height="60" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="border-t border-white/5 bg-night-900/80">
+    <div class="mx-auto max-w-6xl px-5 py-12">
+      <div class="flex flex-col items-start justify-between gap-10 md:flex-row md:items-center">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <svg class="h-7 w-7" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="14" fill="#111a3a"/>
+              <circle cx="42" cy="32" r="19" fill="#f3dfa0"/>
+              <circle cx="50" cy="22" r="5" fill="#111a3a"/>
+            </svg>
+            <span class="text-base font-semibold text-white">MondPlan</span>
+          </div>
+          <p class="mt-3 max-w-xs text-sm leading-relaxed text-slate-500">
+            A biodynamic moon calendar for gardening, beauty, sleep, and mood. Made by 100BadIdeas.
+          </p>
+        </div>
+        <nav class="flex flex-col gap-3 text-sm text-slate-400 sm:flex-row sm:items-center sm:gap-8" aria-label="Footer navigation">
+          <a href="privacy.html" class="transition hover:text-moon-300">Privacy Policy</a>
+          <a href="support.html" class="transition hover:text-moon-300">Support</a>
+          <a href="https://apps.apple.com/app/id6758746304" class="transition hover:text-moon-300">App Store</a>
+        </nav>
+      </div>
+      <div class="mt-10 border-t border-white/5 pt-6 text-xs text-slate-600">
+        <p>&copy; 2026 100BadIdeas. All rights reserved. Apple and the Apple logo are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ================================================================
+       MondPlan - interactive moon phase widget
+       Lunar phase math: standard synodic-cycle approximation based on
+       Jean Meeus, Astronomical Algorithms. Reference new moon:
+       2000-01-06 18:14 UTC (JD 2451550.1). Cycle = 29.530588853 days.
+       ================================================================ */
+    (function () {
+      "use strict";
+
+      var CYCLE = 29.530588853;
+      var PHASES = [
+        { name: "New Moon", start: 0 },
+        { name: "Waxing Crescent", start: 1.85 },
+        { name: "First Quarter", start: 5.54 },
+        { name: "Waxing Gibbous", start: 9.23 },
+        { name: "Full Moon", start: 12.92 },
+        { name: "Waning Gibbous", start: 16.61 },
+        { name: "Last Quarter", start: 20.30 },
+        { name: "Waning Crescent", start: 23.99 }
+      ];
+      var NEXT_DAY = 27.68; // back to New Moon
+
+      var moonDisc = document.getElementById("moon-disc");
+      var darkLeft = document.getElementById("dark-left");
+      var darkRight = document.getElementById("dark-right");
+      var moonSvg = document.getElementById("moon-svg");
+      var phaseName = document.getElementById("phase-name");
+      var phaseAge = document.getElementById("phase-age");
+      var phaseIllum = document.getElementById("phase-illum");
+      var slider = document.getElementById("phase-slider");
+      var btnToday = document.getElementById("btn-today");
+
+      function phaseLabel(age) {
+        for (var i = 0; i < PHASES.length; i++) {
+          if (age >= PHASES[i].start && age < NEXT_DAY) {
+            if (i === 0 && age >= NEXT_DAY) return PHASES[0].name;
+            return PHASES[i].name;
+          }
+        }
+        return PHASES[0].name;
+      }
+
+      function render(age) {
+        var p = ((age % CYCLE) + CYCLE) % CYCLE / CYCLE; // 0..1
+        var illum = (1 - Math.cos(2 * Math.PI * p)) / 2;
+        // Two-disc shadow model (shadow discs share disc radius R, clipped to halves).
+        // d1: left-half shadow center offset (negative = disc center moves left, uncovering disc's left half)
+        // d2: right-half shadow center offset (negative = disc center moves left, uncovering disc's right half)
+        var R = 46;
+        var d1, d2;
+        if (p < 0.5) {                    // new -> full (waxing)
+          d1 = -4 * R * p;
+          d2 = -4 * R * p;
+        } else if (p < 0.75) {            // full -> last quarter (waning)
+          d1 = -2 * R + 12 * R * (p - 0.5);
+          d2 = -2 * R + 8 * R * (p - 0.5);
+        } else {                          // last quarter -> new
+          d1 = R - 4 * R * (p - 0.75);
+          d2 = 0;
+        }
+
+        moonDisc.setAttribute("cx", 50);
+        darkLeft.setAttribute("cx", 50 + d1);
+        darkRight.setAttribute("cx", 50 + d2);
+        phaseName.textContent = phaseLabel(age);
+        phaseAge.textContent = age.toFixed(1);
+        phaseIllum.textContent = Math.round(illum * 100);
+        moonSvg.setAttribute("aria-label", "Moon phase: " + phaseLabel(age));
+      }
+
+      // Julian Day Number (Gregorian calendar)
+      function julianDay(date) {
+        var y = date.getUTCFullYear();
+        var m = date.getUTCMonth() + 1;
+        var d = date.getUTCDate();
+        var a = Math.floor((14 - m) / 12);
+        var yy = y + 4800 - a;
+        var mm = m + 12 * a - 3;
+        return d + Math.floor((153 * mm + 2) / 5) + 365 * yy +
+          Math.floor(yy / 4) - Math.floor(yy / 100) + Math.floor(yy / 400) - 32045;
+      }
+
+      function moonAgeNow() {
+        var jdn = julianDay(new Date());
+        return ((jdn - 2451550.1) % CYCLE + CYCLE) % CYCLE;
+      }
+
+      slider.addEventListener("input", function () {
+        render(parseFloat(slider.value));
+      });
+
+      btnToday.addEventListener("click", function () {
+        var age = moonAgeNow();
+        slider.value = age.toFixed(2);
+        render(age);
+      });
+
+      // Initial state: today's real moon
+      render(moonAgeNow());
+
+      /* ============ FAQ accordion ============ */
+      var toggles = document.querySelectorAll(".faq-toggle");
+      toggles.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var item = btn.closest(".faq-item");
+          var panel = item.querySelector(".faq-panel");
+          var isOpen = panel.classList.contains("open");
+          // close all
+          document.querySelectorAll(".faq-item.open").forEach(function (openItem) {
+            openItem.classList.remove("open");
+            openItem.querySelector(".faq-toggle").setAttribute("aria-expanded", "false");
+          });
+          // open clicked (if it was closed)
+          if (!isOpen) {
+            item.classList.add("open");
+            btn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
