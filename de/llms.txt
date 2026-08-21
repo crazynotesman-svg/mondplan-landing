@@ -42,4 +42,5 @@ MondPlan ist ein datenschutzfreundlicher, einmalig käuflicher biodynamischer Mo
 - Startseite (Deutsch): https://mondplan.100ideas.net/de/
 - Support (Deutsch): https://mondplan.100ideas.net/de/support.html
 - Datenschutzerklärung (Deutsch): https://mondplan.100ideas.net/de/privacy.html
+- Mondphasen 2026 (komplettes Jahr, UTC/MEZ, Meeus Kap. 49): https://mondplan.100ideas.net/de/mondphasen-2026.html
 - Startseite (Englisch): https://mondplan.100ideas.net/

@@ -14,28 +14,36 @@ mondplan/
 ├── index.html          # Main landing page (EN, default) - hero + interactive moon + features + FAQ
 ├── privacy.html        # App Store compliant privacy policy (EN)
 ├── support.html        # Support page (EN, required by App Store)
+├── moon-phases-2026.html # SEO content page: full-year 2026 moon phase calendar (EN, Meeus ch.49)
 ├── 404.html            # Styled 404 page (noindex) - eliminates soft-404s on Cloudflare Pages
 ├── llms.txt            # Short plain-text summary for AI crawlers (Perplexity, ChatGPT, Claude)
 ├── llms-full.txt       # Full plain-text reference (FAQ + all features) for AI crawlers
 ├── robots.txt          # Allows standard + AI crawlers (GPTBot, PerplexityBot, ClaudeBot...)
-├── sitemap.xml         # XML sitemap (6 pages: 3 EN + 3 DE) with hreflang alternates
+├── sitemap.xml         # XML sitemap (8 pages: 4 EN + 4 DE) with hreflang alternates
 ├── _headers            # Cloudflare Pages headers (security + charset/cache for crawler files)
 ├── README.md           # This file
 ├── de/                 # German localization (DACH market) - subdirectory architecture
 │   ├── index.html      # German landing page (lang="de", German JSON-LD + FAQ)
 │   ├── privacy.html    # German privacy policy (Datenschutzerklärung)
 │   ├── support.html    # German support page
+│   ├── mondphasen-2026.html # German SEO page: Mondphasen 2026 (Meeus ch.49)
 │   └── llms.txt        # German plain-text summary for AI crawlers
 ├── assets/
 │   ├── tailwind.css    # Compiled, minified Tailwind CSS (committed to the repo)
 │   ├── badge-appstore.svg  # Official Apple "Download on the App Store" badge
 │   ├── favicon.svg     # Moon favicon
 │   ├── apple-touch-icon.png # 180x180 iOS home-screen icon
-│   └── og-image.png    # Open Graph share image (1200x630)
+│   ├── og-image.png    # Open Graph share image (EN, 1200x630)
+│   └── og-image-de.png # Open Graph share image (DE, 1200x630)
+├── data/
+│   └── moon-phases-2026.json # Meeus ch.49 computed 2026 phases (source data)
 ├── src/
 │   └── input.css       # Tailwind source (brand tokens + custom styles)
 ├── scripts/
-│   └── generate_og.py  # Regenerates og-image.png (Pillow)
+│   ├── generate_og.py  # Regenerates og-image(-de).png (Pillow)
+│   ├── generate_moon_dates.py # Computes 2026 moon phases (Meeus ch.49)
+│   ├── build_phase_pages.py   # Builds the two moon-phase pages from data + templates
+│   └── templates/      # Page templates ({{TABLE_EN}}, {{EVENTS_EN}}, ...)
 └── package.json        # Dev-only: Tailwind build pipeline
 ```
 

@@ -42,4 +42,5 @@ MondPlan is a privacy-first, one-time purchase biodynamic moon calendar app for 
 - Home: https://mondplan.100ideas.net/
 - Support: https://mondplan.100ideas.net/support.html
 - Privacy Policy: https://mondplan.100ideas.net/privacy.html
+- Moon Phases 2026 (full year, UTC/CET, Meeus ch.49): https://mondplan.100ideas.net/moon-phases-2026.html
 - German version: https://mondplan.100ideas.net/de/ (llms.txt: https://mondplan.100ideas.net/de/llms.txt)

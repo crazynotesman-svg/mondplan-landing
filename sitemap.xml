@@ -30,6 +30,15 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/support.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/support.html"/>
   </url>
+  <url>
+    <loc>https://mondplan.100ideas.net/moon-phases-2026.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mondplan.100ideas.net/moon-phases-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/mondphasen-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/moon-phases-2026.html"/>
+  </url>
 
   <!-- German (de subdirectory) -->
   <url>
@@ -58,6 +67,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://mondplan.100ideas.net/support.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/support.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/support.html"/>
+  </url>
+  <url>
+    <loc>https://mondplan.100ideas.net/de/mondphasen-2026.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mondplan.100ideas.net/moon-phases-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/mondphasen-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/moon-phases-2026.html"/>
   </url>
 
 </urlset>
