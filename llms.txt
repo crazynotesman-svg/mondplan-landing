@@ -46,4 +46,6 @@ MondPlan is a privacy-first, one-time purchase biodynamic moon calendar app for 
 - Full Moon 2026 (13 dates, names, UTC/CET): https://mondplan.100ideas.net/en/full-moon-2026.html
 - New Moon 2026 (12 dates, UTC/CET): https://mondplan.100ideas.net/en/new-moon-2026.html
 - Best Moon Calendar App 2026 (comparison vs Moonly / The Moon / MoonX): https://mondplan.100ideas.net/en/best-moon-calendar-app-2026.html
+- How Moon Phases Work (science, 8 phases, synodic month): https://mondplan.100ideas.net/en/how-moon-phases-work.html
+- Blue Moon 2026 (May 31, blood moon Mar 3, definitions): https://mondplan.100ideas.net/en/blue-moon-2026.html
 - German version: https://mondplan.100ideas.net/de/ (llms.txt: https://mondplan.100ideas.net/de/llms.txt)

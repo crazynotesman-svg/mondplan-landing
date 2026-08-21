@@ -67,6 +67,24 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/mondkalender-app-vergleich.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/en/best-moon-calendar-app-2026.html"/>
   </url>
+  <url>
+    <loc>https://mondplan.100ideas.net/en/how-moon-phases-work.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mondplan.100ideas.net/en/how-moon-phases-work.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/mondphasen-erklaert.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/en/how-moon-phases-work.html"/>
+  </url>
+  <url>
+    <loc>https://mondplan.100ideas.net/en/blue-moon-2026.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mondplan.100ideas.net/en/blue-moon-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/blauermond-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/en/blue-moon-2026.html"/>
+  </url>
 
   <!-- German (de subdirectory) -->
   <url>
@@ -147,6 +165,24 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/mondkalender-app-vergleich.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mondplan.100ideas.net/en/best-moon-calendar-app-2026.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/en/best-moon-calendar-app-2026.html"/>
+  </url>
+  <url>
+    <loc>https://mondplan.100ideas.net/de/mondphasen-erklaert.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/mondphasen-erklaert.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mondplan.100ideas.net/en/how-moon-phases-work.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/en/how-moon-phases-work.html"/>
+  </url>
+  <url>
+    <loc>https://mondplan.100ideas.net/de/blauermond-2026.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/blauermond-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mondplan.100ideas.net/en/blue-moon-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/en/blue-moon-2026.html"/>
   </url>
 
 </urlset>
