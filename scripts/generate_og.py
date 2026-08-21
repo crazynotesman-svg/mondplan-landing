@@ -17,6 +17,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1200, 630
 ASSETS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets")
+BRAND = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src", "brand")
 
 # Palette (matches src/input.css brand tokens)
 BG_TOP = (10, 15, 36)      # night-950
@@ -142,6 +143,16 @@ def main(lang):
     d.text((94, 310), c["subtitle"], font=arial, fill=ACCENT)
     d.text((94, 372), c["line1"], font=arial_small, fill=MUTED)
     d.text((94, 420), c["line2"], font=arial_small, fill=MUTED)
+
+    # Brand mark (small logo) - top-right corner, brand reinforcement
+    logo_path = os.path.join(BRAND, "full-logo.png")
+    if os.path.exists(logo_path):
+        logo = Image.open(logo_path).convert("RGBA")
+        # 96x96 in top-right with 30px margin (logo is square, transparent bg)
+        logo_sz = 96
+        logo = logo.resize((logo_sz, logo_sz), Image.LANCZOS)
+        # place at (W - logo_sz - 30, 30)
+        img.alpha_composite(logo, (W - logo_sz - 30, 30))
 
     img.convert("RGB").save(out, "PNG")
     print("wrote", out, os.path.getsize(out), "bytes")
