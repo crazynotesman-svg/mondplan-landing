@@ -85,6 +85,15 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/blauermond-2026.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/en/blue-moon-2026.html"/>
   </url>
+  <url>
+    <loc>https://mondplan.100ideas.net/en/moon-and-sleep.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mondplan.100ideas.net/en/moon-and-sleep.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/mond-und-schlaf.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/en/moon-and-sleep.html"/>
+  </url>
 
   <!-- German (de subdirectory) -->
   <url>
@@ -183,6 +192,15 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/blauermond-2026.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mondplan.100ideas.net/en/blue-moon-2026.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/en/blue-moon-2026.html"/>
+  </url>
+  <url>
+    <loc>https://mondplan.100ideas.net/de/mond-und-schlaf.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mondplan.100ideas.net/de/mond-und-schlaf.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mondplan.100ideas.net/en/moon-and-sleep.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mondplan.100ideas.net/en/moon-and-sleep.html"/>
   </url>
 
 </urlset>

@@ -48,4 +48,5 @@ MondPlan is a privacy-first, one-time purchase biodynamic moon calendar app for 
 - Best Moon Calendar App 2026 (comparison vs Moonly / The Moon / MoonX): https://mondplan.100ideas.net/en/best-moon-calendar-app-2026.html
 - How Moon Phases Work (science, 8 phases, synodic month): https://mondplan.100ideas.net/en/how-moon-phases-work.html
 - Blue Moon 2026 (May 31, blood moon Mar 3, definitions): https://mondplan.100ideas.net/en/blue-moon-2026.html
+- Moon and Sleep (evidence review: Cajochen 2013, light hypothesis 2021): https://mondplan.100ideas.net/en/moon-and-sleep.html
 - German version: https://mondplan.100ideas.net/de/ (llms.txt: https://mondplan.100ideas.net/de/llms.txt)
