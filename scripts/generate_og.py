@@ -1,16 +1,22 @@
-"""Generate assets/og-image.png (1200x630) for MondPlan.
+"""Generate Open Graph images (1200x630) for MondPlan.
 
-Same two-disc moon geometry as the interactive widget on the landing page.
-Usage: python scripts/generate_og.py
+Supports English (og-image.png) and German (og-image-de.png).
+The moon uses the same terminator-ellipse model as the website widget.
+
+Usage:
+  python scripts/generate_og.py            # generates both languages
+  python scripts/generate_og.py en         # English only
+  python scripts/generate_og.py de         # German only
 """
 import math
 import os
 import random
+import sys
 
 from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1200, 630
-OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "og-image.png")
+ASSETS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets")
 
 # Palette (matches src/input.css brand tokens)
 BG_TOP = (10, 15, 36)      # night-950
@@ -20,6 +26,24 @@ MOON = (243, 223, 160)     # moon-300
 TEXT = (255, 255, 255)
 MUTED = (148, 163, 184)    # slate-400
 ACCENT = (232, 200, 120)   # moon-400
+
+# Localized copy (du form for German, consistent with the site)
+COPY = {
+    "en": {
+        "brand": "MondPlan",
+        "subtitle": "Biodynamic Moon Calendar",
+        "line1": "Gardening - Haircut & Beauty - Sleep - Mood",
+        "line2": "Privacy-first - One-time purchase - iOS",
+        "file": "og-image.png",
+    },
+    "de": {
+        "brand": "MondPlan",
+        "subtitle": "Biodynamischer Mondkalender",
+        "line1": "Gartenbau - Haarschnitt & Schönheit - Schlaf - Stimmung",
+        "line2": "Datenschutz zuerst - Einmalkauf - iOS",
+        "file": "og-image-de.png",
+    },
+}
 
 
 def font(paths, size):
@@ -72,7 +96,9 @@ def draw_moon(img, cx, cy, r, phase_p):
     img.alpha_composite(moon)
 
 
-def main():
+def main(lang):
+    c = COPY[lang]
+    out = os.path.join(ASSETS, c["file"])
     random.seed(6758746304)
 
     # Vertical gradient background
@@ -96,7 +122,7 @@ def main():
         a = random.randint(70, 200)
         d.ellipse([x - r, y - r, x + r, y + r], fill=(255, 255, 255, a))
 
-    # Moon (waxing gibbous, ~p=0.32 => about 74% illuminated)
+    # Moon (waxing gibbous, ~p=0.32 => about 71% illuminated)
     draw_moon(img, cx=920, cy=315, r=205, phase_p=0.32)
 
     # Soft halo behind the moon
@@ -112,14 +138,19 @@ def main():
     arial_small = font(["/System/Library/Fonts/Supplemental/Arial.ttf",
                         "/System/Library/Fonts/Arial.ttf"], 23)
 
-    d.text((90, 190), "MondPlan", font=arial_bold, fill=TEXT)
-    d.text((94, 310), "Biodynamic Moon Calendar", font=arial, fill=ACCENT)
-    d.text((94, 372), "Gardening - Haircut & Beauty - Sleep - Mood", font=arial_small, fill=MUTED)
-    d.text((94, 420), "Privacy-first - One-time purchase - iOS", font=arial_small, fill=MUTED)
+    d.text((90, 190), c["brand"], font=arial_bold, fill=TEXT)
+    d.text((94, 310), c["subtitle"], font=arial, fill=ACCENT)
+    d.text((94, 372), c["line1"], font=arial_small, fill=MUTED)
+    d.text((94, 420), c["line2"], font=arial_small, fill=MUTED)
 
-    img.convert("RGB").save(OUT, "PNG")
-    print("wrote", OUT, os.path.getsize(OUT), "bytes")
+    img.convert("RGB").save(out, "PNG")
+    print("wrote", out, os.path.getsize(out), "bytes")
 
 
 if __name__ == "__main__":
-    main()
+    langs = sys.argv[1:] if len(sys.argv) > 1 else ["en", "de"]
+    for l in langs:
+        if l in COPY:
+            main(l)
+        else:
+            print("unknown lang:", l, "(use en/de)")
