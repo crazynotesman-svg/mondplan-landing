@@ -31,40 +31,44 @@ def font(paths, size):
     return ImageFont.load_default(size)
 
 
-def draw_moon(img, cx, cy, r, phase_p):
-    """Draw a moon phase using the same two-disc model as the website widget.
+def moon_polygon(cx, cy, r, phase_p, n=180):
+    """Illuminated area as a half-disc plus the terminator ellipse arc.
 
-    Two shadow discs share the disc radius, clipped to left/right halves.
-    d1 / d2 are horizontal center offsets of the shadow discs relative to cx.
+    Matches the moonPath() logic used by the website widget:
+    - p in [0, 0.5)  waxing: right half disc + terminator arc (rx = r*cos(2pi*p))
+    - p in [0.5, 1)  waning: left half disc + terminator arc (rx = r*cos(2pi*(p-0.5)))
+    The terminator arc runs bottom -> top through angle 0 (right side when rx > 0,
+    left side when rx < 0), which is the exact SVG sweep-flag equivalent.
     """
-    d1, d2 = 0.0, 0.0
-    if phase_p < 0.5:                         # new -> full (waxing)
-        d1 = -4 * r * phase_p
-        d2 = -4 * r * phase_p
-    elif phase_p < 0.75:                      # full -> last quarter (waning)
-        d1 = -2 * r + 12 * r * (phase_p - 0.5)
-        d2 = -2 * r + 8 * r * (phase_p - 0.5)
-    else:                                     # last quarter -> new
-        d1 = r - 4 * r * (phase_p - 0.75)
-        d2 = 0.0
+    import math
+    pts = []
+    if phase_p < 0.5:
+        # outer arc: right half disc, top (-90 deg) -> bottom (+90 deg)
+        for k in range(n + 1):
+            a = math.radians(-90 + 180 * k / n)
+            pts.append((cx + r * math.cos(a), cy + r * math.sin(a)))
+        # inner terminator arc: bottom (+90 deg) -> top (-90 deg), through angle 0
+        rx = r * math.cos(2 * math.pi * phase_p)
+        for k in range(n + 1):
+            b = math.radians(90 - 180 * k / n)
+            pts.append((cx + rx * math.cos(b), cy + r * math.sin(b)))
+    else:
+        # outer arc: left half disc, top (-90 deg) -> bottom (-270 deg) via left side
+        for k in range(n + 1):
+            a = math.radians(-90 - 180 * k / n)
+            pts.append((cx + r * math.cos(a), cy + r * math.sin(a)))
+        # inner terminator arc: bottom (+90 deg) -> top (-90 deg), through angle 0
+        rx = r * math.cos(2 * math.pi * (phase_p - 0.5))
+        for k in range(n + 1):
+            b = math.radians(90 - 180 * k / n)
+            pts.append((cx + rx * math.cos(b), cy + r * math.sin(b)))
+    return pts
 
+
+def draw_moon(img, cx, cy, r, phase_p):
+    """Draw a moon phase using the same terminator model as the website widget."""
     moon = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    ImageDraw.Draw(moon).ellipse([cx - r, cy - r, cx + r, cy + r], fill=MOON + (255,))
-
-    shadow = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    ds = ImageDraw.Draw(shadow)
-    ds.ellipse([cx + d1 - r, cy - r, cx + d1 + r, cy + r], fill=BG_MID + (255,))
-    ds.ellipse([cx + d2 - r, cy - r, cx + d2 + r, cy + r], fill=BG_MID + (255,))
-
-    left_mask = Image.new("L", img.size, 0)
-    ImageDraw.Draw(left_mask).rectangle([0, 0, cx, H], fill=255)
-    right_mask = Image.new("L", img.size, 0)
-    ImageDraw.Draw(right_mask).rectangle([cx, 0, W, H], fill=255)
-
-    empty = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    moon = Image.alpha_composite(moon, Image.composite(shadow, empty, left_mask))
-    moon = Image.alpha_composite(moon, Image.composite(shadow, empty, right_mask))
-
+    ImageDraw.Draw(moon).polygon(moon_polygon(cx, cy, r, phase_p), fill=MOON + (255,))
     img.alpha_composite(moon)
 
 

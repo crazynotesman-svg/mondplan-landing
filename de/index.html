@@ -267,20 +267,10 @@
               <svg id="moon-svg" viewBox="0 0 100 100" class="h-auto w-full" role="img" aria-label="Mondphasen-Darstellung">
                 <title>Aktuelle Mondphase</title>
                 <desc>Eine Darstellung der aktuellen Mondphase, gesteuert über den Regler.</desc>
-                <defs>
-                  <clipPath id="clip-left"><rect x="0" y="0" width="50" height="100"/></clipPath>
-                  <clipPath id="clip-right"><rect x="50" y="0" width="50" height="100"/></clipPath>
-                </defs>
-                <!-- illuminated disc -->
-                <circle id="moon-disc" cx="50" cy="50" r="46" fill="#f3dfa0" stroke="rgba(253,248,231,0.2)" stroke-width="1.5"/>
-                <!-- left-half shadow disc (same radius as illuminated disc) -->
-                <g clip-path="url(#clip-left)">
-                  <circle id="dark-left" cx="50" cy="50" r="46" fill="#0a0f24"/>
-                </g>
-                <!-- right-half shadow disc -->
-                <g clip-path="url(#clip-right)">
-                  <circle id="dark-right" cx="50" cy="50" r="46" fill="#0a0f24"/>
-                </g>
+                <!-- Beleuchtete Fläche: Halbscheibe + Terminator-Ellipsenbogen (mathematisch korrekte Mondphase) -->
+                <path id="moon-lit" d="M50,4 A46,46 0 0 1 50,96 A46,46 0 0 1 50,4 Z" fill="#f3dfa0"/>
+                <!-- Scheibenumriss -->
+                <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(253,248,231,0.2)" stroke-width="1.5"/>
               </svg>
             </div>
 
@@ -687,9 +677,7 @@
       ];
       var NEXT_DAY = 27.68; // zurück zum Neumond
 
-      var moonDisc = document.getElementById("moon-disc");
-      var darkLeft = document.getElementById("dark-left");
-      var darkRight = document.getElementById("dark-right");
+      var moonLit = document.getElementById("moon-lit");
       var moonSvg = document.getElementById("moon-svg");
       var phaseName = document.getElementById("phase-name");
       var phaseAge = document.getElementById("phase-age");
@@ -707,26 +695,33 @@
         return PHASES[0].name;
       }
 
+      /* Beleuchtete Fläche als Halbscheibe plus Terminator-Ellipsenbogen.
+         Reproduziert die echte Mondphasen-Geometrie (Jean Meeus):
+         - p=0 / p=1 (Neumond): beide Bögen decken sich, Fläche = 0
+         - p=0.25 / p=0.75 (Viertel): Terminator = Sehne, Fläche = Halbscheibe
+         - p=0.5 (Vollmond): beide Bögen vervollständigen die Scheibe
+         Der SVG-Arc-rx muss positiv sein; die Wölbungsseite bestimmt das sweep-Flag:
+         sweep=0 -> Terminator verläuft rechts (rx >= 0), sweep=1 -> links (rx < 0). */
+      function moonPath(p) {
+        var R = 46;
+        var start = "M50,4 ";
+        var outer, inner, rx;
+        if (p < 0.5) {
+          outer = "A" + R + "," + R + " 0 0 1 50,96 ";     // rechte Halbscheibe (sweep=1)
+          rx = R * Math.cos(2 * Math.PI * p);              // +R (Sichel) -> -R (zunehmender Mond)
+        } else {
+          outer = "A" + R + "," + R + " 0 0 0 50,96 ";     // linke Halbscheibe (sweep=0)
+          rx = R * Math.cos(2 * Math.PI * (p - 0.5));      // +R (abnehmender Mond) -> -R (Sichel)
+        }
+        inner = "A" + Math.abs(rx).toFixed(2) + "," + R + " 0 0 " + (rx >= 0 ? 0 : 1) + " 50,4";
+        return start + outer + inner + " Z";
+      }
+
       function render(age) {
         var p = ((age % CYCLE) + CYCLE) % CYCLE / CYCLE; // 0..1
         var illum = (1 - Math.cos(2 * Math.PI * p)) / 2;
-        // Two-disc shadow model (shadow discs share disc radius R, clipped to halves).
-        var R = 46;
-        var d1, d2;
-        if (p < 0.5) {                    // Neu -> Voll (zunehmend)
-          d1 = -4 * R * p;
-          d2 = -4 * R * p;
-        } else if (p < 0.75) {            // Voll -> letztes Viertel (abnehmend)
-          d1 = -2 * R + 12 * R * (p - 0.5);
-          d2 = -2 * R + 8 * R * (p - 0.5);
-        } else {                          // letztes Viertel -> Neu
-          d1 = R - 4 * R * (p - 0.75);
-          d2 = 0;
-        }
 
-        moonDisc.setAttribute("cx", 50);
-        darkLeft.setAttribute("cx", 50 + d1);
-        darkRight.setAttribute("cx", 50 + d2);
+        moonLit.setAttribute("d", moonPath(p));
         phaseName.textContent = phaseLabel(age);
         phaseAge.textContent = age.toFixed(1).replace(".", ",");
         phaseIllum.textContent = Math.round(illum * 100);
